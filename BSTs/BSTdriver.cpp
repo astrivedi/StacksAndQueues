@@ -3,16 +3,25 @@
 using namespace std;
 
 int main() {
-    int A[] = {22,33,11,66,5};
+    int A[] = {22,33,11,66,5,22,133,7,6,55};
+  
     BST T;
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 10; i++) {
         cout << "inserting " << A[i] << endl;
-        getchar();
         T.add(A[i]);
-        T.print();
     }    
+
     T.print();
+
+    if (T.find(33)) cout << "Found 33" << endl;
+    else cout << "Not Found 33" << endl;
+
+
+    if (T.find(105)) cout << "Found 105" << endl;
+    else cout << "Not Found 105" << endl;
+    
+    cout << T.findMin(T.find(7))->key << endl;
 
     return 0;
 }
