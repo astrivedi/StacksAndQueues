@@ -48,6 +48,8 @@ class Graph {
 
     void addNode(string _name);
     void addEdge(string _from, string _to);
+    void addEdge(string _from, string _to, int _w);
+
     void print();
 
     void depthFirstTraversal(string _src); 
@@ -59,6 +61,7 @@ class Graph {
     void DijsktraAlgorithm(string _src, string _dst);
 
     private:
+    
     GraphNode* getNode(string _name);
     bool isEdge(string _from, string _to);
     void eraseMarks();
